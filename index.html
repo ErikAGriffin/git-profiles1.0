@@ -12,13 +12,13 @@
   <body ng-controller="GitUserSearchController">
     <div>
       <form class="form-horizontal">
-        <input type="text">
+        <input type="text" ng-model="searchTerm">
         <button class="btn" ng-click="doSearch()">Search</button>
       </form>
 
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li>
-          <img ng-src="{{user.avatar_url}}&s=125">
+          <img ng-src="{{user.avatar_url}}&s=150">
           <a ng-href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
